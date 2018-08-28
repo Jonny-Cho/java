@@ -1,0 +1,24 @@
+package star;
+
+public class star8 {
+
+	public static void main(String[] args) {
+		// ctrl+D 한줄삭제
+		// sysout 입력하고 ctrl+space
+		
+		
+		for(int i=1;i<=5;i++){
+			//
+			for(int j=j-i+1;j<=j+i-1;j++){
+				if(j==5){
+					System.out.print("*");	
+				}
+				else
+					System.out.print(" ");
+			}
+			System.out.println();
+		}
+		
+	}
+
+}

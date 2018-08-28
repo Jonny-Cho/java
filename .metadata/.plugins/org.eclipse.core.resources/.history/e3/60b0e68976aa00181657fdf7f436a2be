@@ -1,0 +1,14 @@
+package star;
+
+public class star6 {
+
+	public static void main(String[] args) {
+		// ctrl+D 한줄삭제
+		// sysout 입력하고 ctrl+space
+		
+		for(int j=1;j<=5;j++){
+			System.out.print("*");
+		}
+	}
+
+}

@@ -1,0 +1,19 @@
+package star;
+
+public class star7 {
+
+	public static void main(String[] args) {
+		// ctrl+D 한줄삭제
+		// sysout 입력하고 ctrl+space
+		
+		// for문
+		for(int i=5;i<=9;i++){
+			for(int j=1;j<=i;j++){
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+	}
+
+}
