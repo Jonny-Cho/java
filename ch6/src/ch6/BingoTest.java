@@ -14,7 +14,7 @@ public class BingoTest {
 		int cnt4 = 0; // 대각선2 카운트
 		
 		for(int i=0;i<board.length;i++){
-			cnt1 = 0; cnt2 =0;
+			cnt1 = 0; cnt2 = 0;
 			for(int j=0;j<board[i].length;j++){
 				if(board[i][j]==1){cnt1++;};
 				if(board[j][i]==1){cnt2++;};

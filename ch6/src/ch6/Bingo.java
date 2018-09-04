@@ -1,6 +1,5 @@
 package ch6;
 
-import static org.junit.Assert.assertTrue;
 
 public class Bingo {
 
