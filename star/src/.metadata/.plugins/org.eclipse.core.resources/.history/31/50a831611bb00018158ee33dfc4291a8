@@ -1,0 +1,9 @@
+package ch6;
+
+public class CallStackTest {
+
+	public static void main(String[] args) {
+		firstMethod();
+	}
+
+}
