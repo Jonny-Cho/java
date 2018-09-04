@@ -1,35 +1,23 @@
 package star;
 
-public class star8 {
+public class Star8 {
 
 	public static void main(String[] args) {
+//		for(int i=1; i<=5;i++){
+//			for(int j=1;j<=5-i;j++){
+//				System.out.print(" ");
+//			}
+//			for(int k=1;k<=2*i-1;k++){
+//			System.out.print("*");
+//			}
+//			System.out.println();
+//		}
 		
-		// 7¹ø¿¡¼­ if·Î °É·¯³¿
-		for(int i=5;i<=9;i++){
-			for(int j=1;j<=i;j++){
-				if(i+j>9){
-					System.out.print("*");	
-				}
-				else {
-					System.out.print(" ");
-				}
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 1; j <= 5 + i; j++) {
+				System.out.print("*");
 			}
 			System.out.println();
 		}
-		
-		System.out.println();
-		
-		// ÀüÃ¼Âï°í if·Î °É·¯³¿
-        for(int i=1; i<=5; i++) {
-        	for(int j=1; j<=9; j++){
-        		if((i+j>5) && (j-i<5)){
-        			System.out.print("*");
-        		}
-        		else {
-        			System.out.print(" ");
-        		}
-        	}
-        	System.out.println();
-        }
 	}
 }

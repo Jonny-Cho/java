@@ -1,0 +1,15 @@
+package ch6;
+
+class Math {
+	//메서드-> 중간값을 반환 -> 오름차순 정렬 후 가운데값 반환
+	
+}
+
+class MyMath {
+	public static void main(String[] args) {
+		System.out.println(mm.mid(1, 2, 3)); //2
+		System.out.println(mm.mid(5, 6, 4)); //5
+		System.out.println(mm.mid(1, 1, 2)); //1
+		System.out.println(mm.mid(1, 1, 1)); //1
+	}
+}

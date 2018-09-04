@@ -1,0 +1,10 @@
+package star;
+
+public class BaseBallTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

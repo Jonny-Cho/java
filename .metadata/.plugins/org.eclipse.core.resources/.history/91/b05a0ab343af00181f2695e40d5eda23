@@ -1,0 +1,11 @@
+package ch6;
+
+class Math {
+	
+}
+
+class MyMath {
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,18 @@
+package ch6;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class MyMathTest2 {
+
+	@Test
+	public void test() {
+		assertTrue(mid(1,2,3))
+	}
+	
+	int mid(int x, int y, int z){
+		return y;
+	}
+
+}

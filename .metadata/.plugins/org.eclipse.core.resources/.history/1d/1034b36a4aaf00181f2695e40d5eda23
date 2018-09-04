@@ -1,0 +1,22 @@
+package star;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BaseBallGameTest2 {
+
+	@Test public void test1() { assertTrue(mid(123,234)=="0S2B");}
+	@Test public void test2() { assertTrue(mid(456,789)=="0S0B");}
+	@Test public void test3() { assertTrue(mid(615,615)=="3S0B");}
+	@Test public void test4() { assertTrue(mid(342,345)=="2S1B");}
+	@Test public void test5() { assertTrue(mid(794,194)=="2S1B");}
+	@Test public void test6() { assertTrue(mid(1,2,3)==2);}
+	@Test public void test7() { assertTrue(mid(1,2,3)==2);}
+	@Test public void test8() { assertTrue(mid(1,2,3)==2);}
+	
+	String check(String s1,String s2){
+		return "0S2B";
+	}
+
+}

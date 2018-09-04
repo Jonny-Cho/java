@@ -1,0 +1,79 @@
+package star;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Footballgame {
+
+	public static void main(String[] args) {
+		int[] arr1 = new int[3]; //{ 4, 3, 7 };
+		int[] arr2 = { 4, 2, 3 };
+		int sCnt = 0; // 스트라이크 갯수
+		int bCnt = 0; // 볼 갯수
+		
+		// 배열 arr1을 임의의 숫자(1~9, 중복없이)로 채우시오.
+		// 1. 사용자로부터 3자리의 문자열(숫자로만 이루어진)을 입력받으시오.
+		// 2. 입력받은 문자열이 배열arr1과 일치하는지 확인하고 그 결과를 출력.
+		// 3. 3S0B이 될때까지 반복적으로 입력을 받는다.
+		
+		
+		// 1. 배열에 숫자 3개 중복없이 채우기
+		
+		int[] numArr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+		
+		for(int i=0;i<numArr.length*5;i++){
+			int n = (int)(Math.random()*8)+1;
+			int tmp = numArr[0];
+			numArr[0] = numArr[n];
+			numArr[n] = tmp;
+		}
+		for(int i=0;i<3;i++){
+			arr1[i] = numArr[i];
+		}
+		
+//		System.out.println(Arrays.toString(arr1));
+		
+		// 승리할때까지 반복
+		while(sCnt!=3){
+			sCnt = 0;
+			bCnt = 0;
+			
+			// 2. 사용자에게 3개의 숫자를 입력받아 arr2 배열에 넣기
+			
+			Scanner scan = new Scanner(System.in);
+			System.out.print("3자리 숫자를 입력하세요");
+			String input = scan.nextLine();
+			if(0 <= input <=999){
+				
+			} else {
+				//경고문 출력후 재입력
+			}
+			
+			int num = Integer.parseInt(input);
+			
+			for(int i=0;i<3;i++){
+				arr2[i] = ((int)((num/Math.pow(10, 2-i))%10));
+			} 
+			
+			System.out.println(Arrays.toString(arr2));
+				
+			// 3. 두 배열을 비교해서 스트라이크와 볼의 갯수를 계산
+			for(int i=0; i < arr1.length; i++){
+				for(int j=0; j< arr2.length; j++){
+					if(arr1[i]==arr2[j]){
+						// 자리도 같고, 숫자도 같으면
+						if(i==j){
+							sCnt++;	
+						} 
+						// 자리는 다른데, 숫자는 같으면
+						else {
+							bCnt++;	
+						}
+					}
+				}
+			}
+			System.out.println(sCnt+"S"+bCnt+"B");
+		}	
+		System.out.println("승리");
+	}
+
+}

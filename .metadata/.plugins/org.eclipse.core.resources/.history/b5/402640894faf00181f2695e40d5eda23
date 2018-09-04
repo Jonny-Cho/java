@@ -1,0 +1,30 @@
+package star;
+
+public class BaseBallTest {
+
+	public static void main(String[] args) {
+		
+		String check(String s1,String s2){
+			int sCnt = 0; // 스트라이크 갯수
+			int bCnt = 0; // 볼 갯수
+//			String s1="123";
+//			String s2="123";
+			for(int i=0; i < s1.length(); i++){
+				for(int j=0; j < s2.length(); j++){
+					if(s1.charAt(i)==s2.charAt(j)){
+						// 자리도 같고, 숫자도 같으면
+						if(i==j){
+							sCnt++;	
+						} 
+						// 자리는 다른데, 숫자는 같으면
+						else {
+							bCnt++;	
+						}
+					}
+				}
+			}
+			return (sCnt+"S"+bCnt+"B");
+		}
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 6 elements to &apos;ch5&apos;&#x0D;&#x0A;- Original project: &apos;src_ch5&apos;&#x0D;&#x0A;- Destination element: &apos;ch5&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Ex3.java&#x0D;&#x0A;     Ex6.java&#x0D;&#x0A;     Ex5.java&#x0D;&#x0A;     Ex2.java&#x0D;&#x0A;     Ex4.java&#x0D;&#x0A;     Ex7.java&#x0D;&#x0A;- Update references to refactored element" description="Move files" destination="=ch5" element1="Ex3.java" element2="Ex6.java" element3="Ex5.java" element4="Ex2.java" element5="Ex4.java" element6="Ex7.java" files="6" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1535934661428" units="0" version="1.0"/>
+</session>
