@@ -1,0 +1,34 @@
+package ch6;
+
+public class CardTest {
+
+	public static void main(String[] args) {
+		System.out.println("Card.width = "+ Card.width); // 클래스명.클래스변수명
+		System.out.println("Card.height = "+ Card.height);
+		
+		Card c1 = new Card(); // 객체 생성후 인스턴스 변수(iv) 사용가능
+		c1.kind = "Heart";
+		c1.number = 7;
+		
+		Card c2 = new Card(); // 카드1과 카드2는 다른 속성을 가지고 있으니까 iv로 정의
+		c2.kind = "Spade";
+		c2.number = 4;
+		
+		System.out.println(c1.kind+","+c1.number);
+		System.out.println(c2.kind+","+c2.number);
+		
+		c1.width = 50;
+		c1.height = 80; // 클래스 변수 값 변경
+		
+		System.out.println(c1.width+","+c1.height);
+		System.out.println(c2.width+","+c2.height); // c2에게도 영향이 감
+	}
+
+}
+
+class Card {
+	String kind; // 개별적 부분은 인스턴스 변수로 정의(무늬 & 숫자)
+	int number; // 객체 생성후 사용가능
+	static int width = 100; // 공통된 부분은 클래스 변수로 정의 (카드의 크기)
+	static int height = 250;// 클래스명.클래스변수명으로 사용가능
+}

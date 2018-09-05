@@ -29,17 +29,17 @@ class Math {
 	}
 }
 
-class MyMath {
-	public static void main(String[] args) {
-		Math mm = new Math();
-		long result = mm.add(1,2);
-		System.out.println(result);
-		
-		long midresult = mm.mid(1,4,3);
-		System.out.println(midresult); //3
-		System.out.println(mm.mid(1, 2, 3)); //2
-		System.out.println(mm.mid(5, 6, 4)); //5
-		System.out.println(mm.mid(6, 1, 4)); //4
-		System.out.println(mm.mid(4, 7, 6)); //6
-	}
-}
+//class MyMath {
+//	public static void main(String[] args) {
+//		Math mm = new Math();
+//		long result = mm.add(1,2);
+//		System.out.println(result);
+//		
+//		long midresult = mm.mid(1,4,3);
+//		System.out.println(midresult); //3
+//		System.out.println(mm.mid(1, 2, 3)); //2
+//		System.out.println(mm.mid(5, 6, 4)); //5
+//		System.out.println(mm.mid(6, 1, 4)); //4
+//		System.out.println(mm.mid(4, 7, 6)); //6
+//	}
+//}
