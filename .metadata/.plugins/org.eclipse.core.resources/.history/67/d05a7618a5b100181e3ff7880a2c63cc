@@ -38,7 +38,7 @@ public class PointTest {
 		System.out.println("p.y=" + p.y);
 		System.out.println(p2.toString()); //기본생성자 호출
 		System.out.println(p.toString()); //매개변수생성자 호출
-		System.out.println(p.getDistance(3)); //(2)와(3)사이 길이 계산
+		System.out.println(p.getDistance(3)); //(2,2)와(3,3)사이 길이 계산
 		System.out.println(p.getDistance(3,3)); //(2,2)와(3,3)사이 길이 계산
 	}
 }
