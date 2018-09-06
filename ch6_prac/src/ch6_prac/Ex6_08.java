@@ -1,6 +1,6 @@
 package ch6_prac;
 
-class playingCard {
+class PlayingCard {
 	int kind;
 	int num;
 	
@@ -11,6 +11,9 @@ class playingCard {
 		kind = k;
 		num = n;
 	}
+}
+
+class ch6_08 {
 	
 	public static void main(String args[]) {
 		PlayingCard card = new PlayingCard(1,1);
