@@ -1,0 +1,8 @@
+package ch6_prac;
+
+// static을 붙여야 하는 멤버는?
+
+class ch6_10 {
+	public static void main(String args[]) {
+	}
+}
