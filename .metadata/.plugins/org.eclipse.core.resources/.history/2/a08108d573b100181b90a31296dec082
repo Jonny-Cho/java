@@ -1,0 +1,26 @@
+package ch6_prac;
+
+public class Ex6_05 {
+	public static void main(String args[]){
+		Student s = new Student("홍길동",1,1,100,60,76);
+	}
+}
+
+class Student{
+	String name; //학생이름
+	int ban; //반
+	int no; //번호
+	int kor; //국어점수
+	int eng; //영어점수
+	int math; //수학점수
+	
+	int getTotal(){
+		int result = kor + eng + math;
+		return result;
+	}
+	
+	float getAverage(){
+		float result = (int)(getTotal() / 3f*10+0.5f) /10f;
+		return result;
+	}
+}
