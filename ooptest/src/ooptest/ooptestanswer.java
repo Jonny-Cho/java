@@ -1,4 +1,4 @@
-/*package ooptest;
+/*package oopTest;
 
 class Point3D extends Point {
 	int z;
@@ -43,9 +43,9 @@ class Point {
 	}
 
 	public boolean equals(Object obj) {
-		if (obj == null && !(obj instanceof Point))
+		// if(obj==null && !(obj instanceof Point)) return false;
+		if (!(obj instanceof Point))
 			return false;
-		// if(!(obj instanceof Point)) return false;
 
 		Point p = (Point) obj;
 
@@ -73,7 +73,7 @@ class Point {
 	}
 }
 
-public class ooptestanswer {
+public class PointTest {
 	public static void main(String[] args) {
 		Point p = new Point(3, 5);
 		Point p2 = new Point(2, 2);
