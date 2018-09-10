@@ -1,0 +1,73 @@
+package ch7;
+// p.392 인터페이스의 장점 -> 새로운 공통점 만들기
+
+
+public class RepairableTest {
+
+	public static void main(String[] args) {
+		Tank tank = new Tank();
+		Dropshiop dropship = new Dropship();
+		
+		Marine marine = new Marine();
+		SCV scv = new SCV();
+		scv.repair(tank);
+		scv.repair(dropship);
+//		scv.repair(marine); // 에러
+	}
+
+}
+
+interface Repairable {}
+
+class Unit {
+	int hitPoint;
+	final int MAX_HP;
+	Unit(int hp){
+		MAX_HP = hp;
+	}
+	// ...
+}
+
+class GroundUnit extends Unit {
+	GroundUnit(int hp){
+		super(hp);
+	}
+}
+
+class AirUnit extends Unit{
+	AirUnit(int hp){
+		super(hp);
+	}
+}
+
+class Tank extends GroundUnit implements Repairable {
+	Tank(){
+		super(150); // Tank의 HP는 150이다
+		hitPoint = MAX_HP;
+	}
+	
+	public String toString(){
+		return "Tank";
+	}
+	// ...
+}
+
+class Dropship extends AirUnit implements Repairable {
+	Dropship(){
+		super(125);
+		hitPoint = MAX_HP;
+	}
+	
+	public String toString(){
+		return "Dropship";
+	}
+	// ...
+}
+
+class Marine extends GroundUnit{
+	Marine(){
+		super(40);
+		hitPoint = MAX_HP;
+	}
+	// ...
+}

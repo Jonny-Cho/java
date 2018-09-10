@@ -1,4 +1,4 @@
-package ch6;
+/*package ch6;
 
 class Data {int x;} //iv
 
@@ -21,3 +21,4 @@ public class ReferenceParamEx {
 	}
 	
 }
+*/
