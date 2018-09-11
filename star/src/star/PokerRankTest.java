@@ -172,6 +172,8 @@ public class PokerRankTest {
 	}
 }
 
+
+
 class Card {
 	int kind;
 	int num;
