@@ -5,13 +5,13 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class PokerRankTest {
-
+	
 	@Test
-	public void test() {
+	public void test1() {
 		Card[] cards = {
-				new Card(2,1),new Card(1,2),new Card(1,3),new Card(1,4),new Card(1,5),
+				new Card(2,3),new Card(1,5),new Card(1,7),new Card(1,9),new Card(1,1),
 		};
-		assertTrue(rankCheck(cards).equals("STRAIGHT"));
+		assertTrue(rankCheck(cards).equals("NO RANK"));
 	}
 	
 	@Test
@@ -41,13 +41,22 @@ public class PokerRankTest {
 	@Test
 	public void test5() {
 		Card[] cards = {
-				new Card(1,1),new Card(1,1),new Card(1,1),new Card(1,1),new Card(1,5),
+				new Card(2,1),new Card(1,2),new Card(1,3),new Card(1,4),new Card(1,5),
 		};
-		assertTrue(rankCheck(cards).equals("FOUR CARD"));
+		assertTrue(rankCheck(cards).equals("STRAIGHT"));
 	}
-	
+
 	@Test
 	public void test6() {
+		Card[] cards = {
+				new Card(1,3),new Card(1,2),new Card(1,1),new Card(1,7),new Card(1,8),
+		};
+		assertTrue(rankCheck(cards).equals("FLUSH"));
+	}
+
+	
+	@Test
+	public void test7() {
 		Card[] cards = {
 				new Card(1,1),new Card(1,1),new Card(1,1),new Card(1,5),new Card(1,5),
 		};
@@ -55,19 +64,11 @@ public class PokerRankTest {
 	}
 	
 	@Test
-	public void test7() {
-		Card[] cards = {
-				new Card(1,3),new Card(1,2),new Card(1,1),new Card(1,7),new Card(1,8),
-		};
-		assertTrue(rankCheck(cards).equals("FLUSH"));
-	}
-	
-	@Test
 	public void test8() {
 		Card[] cards = {
-				new Card(2,3),new Card(1,5),new Card(1,7),new Card(1,9),new Card(1,1),
+				new Card(1,1),new Card(1,1),new Card(1,1),new Card(1,1),new Card(1,5),
 		};
-		assertTrue(rankCheck(cards).equals("NO RANK"));
+		assertTrue(rankCheck(cards).equals("FOUR CARD"));
 	}
 	
 	@Test
@@ -92,6 +93,11 @@ public class PokerRankTest {
 //		포카드
 //		스트레이트 플러시
 		
+		int pairCnt = 0; // pair 카운트
+		boolean isStraight = false;
+		boolean isFlush = false;
+		boolean isThreeCard = false;
+		boolean isFourCard = false;
 		
 		// 1) 플러시 카운팅
 		
@@ -117,7 +123,6 @@ public class PokerRankTest {
 		
 		// 스트레이트 판별
 		
-		boolean isStraight = false;
 		for(int i=0;i<10;i++){ // i가 9일때 j가 9,10,11,12,13이다.
 			int stCnt = 0; // straight 카운트
 			if(cntArr[i]==1){ // 처음에 1을 발견하면 5개 반복
@@ -134,21 +139,13 @@ public class PokerRankTest {
 		}
 		
 		// 플러시 판별
-		boolean isFlush = false;
 		for(int i=0;i<flushCnt.length;i++){
 			if(flushCnt[i]==5){
 				isFlush = true;
 			}
 		}
 
-		
-//		System.out.println(result);
-		
 		// 페어 판별
-		int pairCnt = 0; // pair 카운트
-		boolean isThreeCard = false;
-		boolean isFourCard = false;
-		
 		for(int i=0;i<cntArr.length;i++){
 			if(cntArr[i]==2){
 				pairCnt++;
@@ -160,15 +157,15 @@ public class PokerRankTest {
 			}
 		}
 		
-		if(pairCnt==0 && isStraight==false && isFlush==false){ result = "NO RANK"; } 
+		if(pairCnt==0 && isFlush==false){ result = "NO RANK"; } 
 		if(pairCnt==1){ result = "ONE PAIR"; }
 		if(pairCnt==2){ result = "TWO PAIR"; }
-		if(isThreeCard == true){ result = "THREE CARD"; }
-		if(isStraight==true){ result = "STRAIGHT";}
-		if(isFlush==true){ result = "FLUSH";}
-		if(isThreeCard == true && pairCnt ==1){ result = "FULL HOUSE"; }
-		if(isFourCard == true){ result = "FOUR CARD"; }
-		if(isStraight==true && isFlush==true){result = "STRAIGHT FLUSH";}
+		if(isThreeCard){ result = "THREE CARD"; }
+		if(isStraight){ result = "STRAIGHT";}
+		if(isFlush){ result = "FLUSH";}
+		if(isThreeCard && pairCnt ==1){ result = "FULL HOUSE"; }
+		if(isFourCard){ result = "FOUR CARD"; }
+		if(isStraight && isFlush){result = "STRAIGHT FLUSH";}
 		
 		System.out.println(result);
 		return result;
