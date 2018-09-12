@@ -1,0 +1,10 @@
+package ch11;
+
+public class MyVectorTest {
+
+	public static void main(String[] args) {
+		Myvector v = new Myvector();
+		v.add("111");
+	}
+
+}

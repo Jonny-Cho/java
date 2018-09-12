@@ -1,9 +1,0 @@
-package ch6;
-
-public class RefereceParamEx3 {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

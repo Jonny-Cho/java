@@ -12,35 +12,21 @@ class SutdaDeck {
 	SutdaCard[] cards = new SutdaCard[CARD_NUM];
 
 	SutdaDeck() {
-		// 배열 SutdaCard 초기화
-		for (int i = 0; i < cards.length; i++) {
-			int num = i % 10 + 1;
-			boolean isKwang = (i < 10) && (num == 1 || num == 3 || num == 8);
-
+//		배열 SutdaCard를 적절히 초기화 하시오.
+//		초기화 해야되는 것들 -> num, isKwang
+//		결과 -> 1K,2,3K,4..8K,...10,1,2...10,
+//		num -> 1~10,1~10 두번 반복되게
+//		isKwang -> 첫번째 1,3,8에만 true
+		int num = 0;
+		boolean isKwang = false;
+		for(int i=1;i<=CARD_NUM;i++){ // i = 1 ~ 20
+			num = i % 10;
+			isKwang = i<=10 && (i==1 || i==3 || i==8);
+			
 			cards[i] = new SutdaCard(num, isKwang);
 		}
 	}
 
-	void shuffle() {
-		for (int i = 0; i < cards.length; i++) {
-			int j = (int) (Math.random() * cards.length);
-			// cards[i]와 cards[j]의 값을 서로 바꾼다.
-			SutdaCard tmp = cards[i];
-			cards[i] = cards[j];
-			cards[j] = tmp;
-		}
-	}
-
-	SutdaCard pick(int index) {
-		if (index < 0 || index >= CARD_NUM) // index의 유효성을 검사한다.
-			return null;
-		return cards[index];
-	}
-
-	SutdaCard pick() {
-		int index = (int) (Math.random() * cards.length);
-		return pick(index); // pick(int index)를 호출한다.
-	}
 }
 
 class SutdaCard {
@@ -65,9 +51,9 @@ class SutdaCard {
 public class Ex7_01 {
 	public static void main(String[] args) {
 
-		SutdaDeck deck = new SutdaDeck();
+	SutdaDeck deck = new SutdaDeck();
 		for (int i = 0; i < deck.cards.length; i++)
 			System.out.print(deck.cards[i] + ",");
-
+	
 	}
 }

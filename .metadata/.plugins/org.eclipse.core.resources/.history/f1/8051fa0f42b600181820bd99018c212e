@@ -1,0 +1,17 @@
+package ch11;
+
+public class MyVectorTest {
+
+	public static void main(String[] args) {
+		MyVector v = new MyVector();
+		MyVector v2 = new MyVector(18);
+		objArr[] obj = new objArr[3];
+		System.out.println(v.size);
+		System.out.println(v.capacity);
+		System.out.println(v2.capacity);
+		System.out.println(v.size());
+		System.out.println(v.capacity());
+		System.out.println(v.isEmpty());
+	}
+
+}
