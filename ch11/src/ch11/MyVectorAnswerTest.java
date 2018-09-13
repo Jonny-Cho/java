@@ -18,6 +18,9 @@ public class MyVectorAnswerTest {
 		
 		System.out.println(v.indexOf("3"));
 		System.out.println(v.indexOf("1"));
+		
+		v.clear();
+		System.out.println(v);
 	}
 	
 }

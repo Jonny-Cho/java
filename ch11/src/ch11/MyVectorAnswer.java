@@ -20,12 +20,12 @@ public class MyVectorAnswer {
 	boolean isEmpty() { return size==0; }
 	
 	void clear() {
-		for(int i=0; objArr.length; i++){
+		for(int i=0; objArr.length; i++)
 			objArr[i] = null;
 		// 모든 값을 null로 바꾼다
 		size = 0;
 		// size를 0으로 바꾼다
-		}
+		
 	}
 	
 	Object get(int index) {
