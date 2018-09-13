@@ -1,7 +1,0 @@
-package ch11;
-
-public class MyVector {
-
-	// 1. Object배열 objArr을 인스턴스 변수로 갖는 MyVector 클래스를 선언
-	Object[] objArr;
-}

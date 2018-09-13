@@ -1,0 +1,7 @@
+package ch11;
+
+public class MyVectorAnswer {
+	Object objArr; //°´Ã¼¹è¿­
+	int size;
+	
+}
