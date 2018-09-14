@@ -1,4 +1,4 @@
-package ch11;
+/*package ch11;
 
 public class MyVectorAnswer {
 	Object[] objArr; //°´Ã¼¹è¿­
@@ -86,3 +86,4 @@ public class MyVectorAnswer {
 	}
 	
 }
+*/

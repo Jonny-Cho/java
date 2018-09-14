@@ -1,0 +1,20 @@
+package ch11;
+
+import java.util.*;
+
+public class MyStack {
+
+	public Object push(Object item){
+		addElement(item);
+		return item;
+	}
+	
+	public Object pop(){
+		Object obj = peek();
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

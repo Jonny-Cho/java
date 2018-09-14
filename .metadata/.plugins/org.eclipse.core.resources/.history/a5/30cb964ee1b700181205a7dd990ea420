@@ -1,0 +1,11 @@
+package ch11;
+
+public class QueueEx1 {
+	static Queue q = new LinkedList();
+	static final int MAX_SIZE = 5;
+	
+	public static void main(String[] args) {
+		System.out.println("help를 입력하면 도움말을 볼 수 있습니다.");
+	}
+
+}

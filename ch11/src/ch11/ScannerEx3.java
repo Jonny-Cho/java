@@ -1,4 +1,4 @@
-package ch11;
+/*package ch11;
 
 import java.util.Scanner;
 import java.io.File;
@@ -27,3 +27,4 @@ public class ScannerEx3 {
 	}
 
 }
+*/

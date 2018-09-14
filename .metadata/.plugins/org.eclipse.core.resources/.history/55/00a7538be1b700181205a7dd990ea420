@@ -1,0 +1,26 @@
+package ch11;
+
+public class QueueEx1 {
+	static Queue q = new LinkedList();
+	static final int MAX_SIZE = 5;
+	
+	public static void main(String[] args) {
+		System.out.println("help를 입력하면 도움말을 볼 수 있습니다.");
+		
+		while(true){
+			System.out.print(">>");
+			try {
+				// 라인단위 입력
+				Scanner s = new Scanner(System.in);
+				String input = s.nextLine().trim();
+				
+				if("".equals(input)) continue;
+				
+				if(input.equalsIgnoreCase("q")) {
+					System.exit(0);
+				}
+			}
+		}
+	}
+
+}

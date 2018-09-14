@@ -1,0 +1,14 @@
+package ch11;
+
+import java.util.*;
+
+public class StackEx1 {
+
+	public static  Stack back = new Stack();
+	public static  Stack forward = new Stack();
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

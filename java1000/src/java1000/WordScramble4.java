@@ -15,8 +15,6 @@ class WordScramble4 {
 
       public static void main(String[] args) { 
             String[] strArr = { "CHANGE", "LOVE", "HOPE", "VIEW"}; 
-            Scanner s = new Scanner(System.in);  // 한번 생성해 놓고 재사용하면 되므로 반복문 밖으로 이동
-
 
             while(true) { 
                   String answer = getAnswer(strArr); 
@@ -32,6 +30,7 @@ class WordScramble4 {
                         System.out.println("Question :" + question); 
                         System.out.print("Your answer is :"); 
 
+                        Scanner s = new Scanner(System.in);
                         String input = s.nextLine(); 
 
                         if(input.equalsIgnoreCase("q")) 
@@ -71,17 +70,18 @@ class WordScramble4 {
       public static String getHint(String answer, char[] hint) { 
     	  	
             int count = 0; // 힌트에 포함된 '_'의 개수
-            String result = "";
 
            // 1. 반복문을 이용해서 hint에 포함된 '_'의 개수를 센다.
             for(int i=0;i<hint.length;i++){
             	if(hint[i]=='_')
-            	count++;
+            		count++;
             }
             
            // 2. count의 값이 2보다 클 때만 정답의 한 글자를 hint에 넣는다.
            //    '_' 찍혀 있다면 넣고 아니면 다른 곳에 넣는다
-            while(true){
+            
+/*           
+ 			while(true){
             	int idx = (int)(Math.random()*hint.length);
             	if(count>2){
         			if(hint[idx]=='_'){
@@ -93,12 +93,23 @@ class WordScramble4 {
         			}
         		} 
             	break;
+			}
+			for0~길이까지
+				result += hint[i];
+			return result;
+*/
+            
+            if(count>2){
+            	while(true){
+            		int idx = (int)(Math.random()*hint.length);
+            		if(hint[idx]=='_'){
+        				hint[idx] = answer.charAt(idx);
+        				break;
+        			}
+            	}
             }
     		
-            for(int i=0;i<hint.length;i++){
-            	result += hint[i];
-            }
-            return result;
+            return new String(hint);
            //    [주의] 반드시 이전 힌트 보다 한글자를 더 보여줘야함.
            //    예를 들어 정답이 "LOVE"이고 이전 힌트가 "L___"이었다면
            //    그 다음 힌트는 "L__E"또는 "L_V_" 와 같은 식이어야 한다.
