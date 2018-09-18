@@ -1,0 +1,25 @@
+import java.awt.Button;
+import java.awt.Frame;
+
+class Exercise13_1 extends Frame{
+	final int SIZE = 5; // 빙고판 크기
+	Button[] btnArr = null;
+	
+	String[] birds = {
+			"참새","두루미","황새","비둘기","까오기",
+			"오리","타조","부엉이","올빼미","뱁새",
+			"꿩","닭","구관조","잉꼬","매",
+			"거위","독수리","콘돌","봉황","공작",
+			"까치","까마귀","앵무새","꾀꼬리","고니"
+	};
+	
+	Exercise13_1() {
+		this("Bingo Game");
+	}
+	
+	Exercise13_1(String title) {
+		super(title);
+		setLayout(new GridLayout(SIZE, SIZE));  // Frame의 layout을 GridLayout으로
+	}
+}
+

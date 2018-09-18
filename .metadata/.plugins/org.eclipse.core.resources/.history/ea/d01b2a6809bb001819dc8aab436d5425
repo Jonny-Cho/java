@@ -1,0 +1,12 @@
+package Exercise;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class GraphicsEx1 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

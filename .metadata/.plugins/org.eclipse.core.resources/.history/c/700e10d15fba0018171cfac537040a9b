@@ -1,0 +1,13 @@
+import java.awt.*;
+import java.awt.event.*;
+
+class Excercise13_1 extends Frame{
+	final int SIZE = 5; // ºù°íÆÇ Å©±â
+	Button[] btnArr = null;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

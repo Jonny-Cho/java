@@ -1,0 +1,12 @@
+package Exercise;
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class Calc {
+	public static void main(String[] args) {
+		Frame f = new Frame("°è»ê±â");
+		TextField tf = new TextField("0");
+		tf.setEditable(false);
+	}
+}
