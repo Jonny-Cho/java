@@ -1,0 +1,10 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class MouseEventTest extends Frame{
+	Label location;
+	
+	public static void main(String[] args) {
+		
+	}
+}

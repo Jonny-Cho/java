@@ -57,7 +57,6 @@ public class BingoEx extends Frame {
 	 */
 	private void shuffle() {
 		// 반복문을 사용해서 문자열 배열 values 의 각 요소의 위치를 뒤바꾼다.
-
 		for (int i = 0; i < values.length * 2; i++) {
 			int r1 = (int) (Math.random() * values.length);// 0~24
 			int r2 = (int) (Math.random() * values.length);// 0~24

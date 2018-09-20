@@ -1,0 +1,10 @@
+package ch13;
+
+public class ThreadEx10 {
+	Static boolean autoSave = false;
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

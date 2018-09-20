@@ -1,0 +1,15 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class MouseEventTest extends Frame{
+	Label location;
+	
+	MouseEventTest(String title){
+		super(title);
+		location = new Label("Mouse Pointer Location :");
+		location.setSize(195,15);
+	}
+	public static void main(String[] args) {
+		
+	}
+}

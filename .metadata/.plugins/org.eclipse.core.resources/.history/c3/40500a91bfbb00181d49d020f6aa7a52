@@ -1,0 +1,74 @@
+package Exercise;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.util.Arrays;
+
+// 1. 레이아웃 구성
+// 2. 5x5 배열 만들기 & 랜덤 숫자 섞기
+// 3. 레이아웃에 버튼으로 만들기
+// + 객체지향적으로 다듬기
+// 4. 이벤트구현 / 클릭하면 노랑색상 / 그 값 불러옴
+// 5. 빙고체크 / 빙고맞으면 초록색상
+
+public class BingoPrac extends Frame{
+	final int SIZE = 5;
+	Button[] btnArr = null;
+	// 1~25까지의 문자가 들어있는 배열 생성
+	String[] numStr = new String[25];
+//	for(int i=0;i<numStr.length;i++){
+//		numStr[i] = Integer.toString(i+1);
+//	}
+//	// 배열 섞기
+//	for(int i=0;i<numStr.length;i++){
+//		//0~24중에 하나 뽑아 변수에 넣기
+//		int random = (int)(Math.random()*numStr.length);
+//		//자리바꿈
+//		String tmp = numStr[i];
+//		numStr[i] = numStr[random];
+//		numStr[random] = tmp;
+//	} 
+
+			
+	BingoPrac(){
+		this("Bingo game");
+	}
+	
+	BingoPrac(String title){
+		super(title);
+		//1. 레이아웃 구성------------------------------------------
+		setLayout(new GridLayout(SIZE, SIZE));
+		
+		EventHandler handler = new EventHandler();
+		addWindowListener(handler);
+		
+		btnArr = new Button[SIZE * SIZE];
+		
+		for (int i=0;i<SIZE*SIZE;i++){
+			btnArr[i] = new Button(numStr[i]);
+			btnArr[i] = (i+1);
+			btnArr[i].addActionListener(handler);
+			add(btnArr[i]);
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		BingoPrac win = new BingoPrac("Bingo Game");
+		win.setVisible(true);
+	} // main method
+} // class BingoPrac
+
+class EventHandler extends WindowAdapter implements ActionListener{
+	public void windowClosing(WindowEvent e) { // Frame의 닫기 버튼을 눌렀을 때 호출된다.
+		e.getWindow().setVisible(false); // Frame을 화면에서 보이지 않도록 하고
+		e.getWindow().dispose(); // 메모리에서 제거한다.
+		System.exit(0); // 프로그램을 종료한다.
+	}
+	
+	public void actionPerformed(ActionEvent ae){
+		Button btn = (Button)ae.getSource();
+		System.out.println(btn.getLabel());
+		btn.setBackground(Color.YELLOW);
+	}
+}
