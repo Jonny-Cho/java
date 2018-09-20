@@ -1,9 +1,0 @@
-package ch11;
-
-public class MyVectorAnswerTest {
-
-	public static void main(String[] args){
-		
-	}
-	
-}

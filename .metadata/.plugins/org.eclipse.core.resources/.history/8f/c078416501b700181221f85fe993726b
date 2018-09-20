@@ -1,9 +1,0 @@
-package ch9;
-
-public class ShallowDeepCopy {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

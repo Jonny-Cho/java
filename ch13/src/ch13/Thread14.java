@@ -23,7 +23,9 @@ class ThreadEx14_1 extends Thread {
 			System.out.println(i--);
 			try {
 				Thread.sleep(1*1000);
-			} catch (InterruptedException e) {}
+			} catch (InterruptedException e) {
+				interrupt(); // 추가
+			}
 			
 //			for(long x=0;x<2500000000L;x++); // 시간지연
 		}
