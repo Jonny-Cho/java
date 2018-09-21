@@ -25,7 +25,7 @@ class ThreadEx1_1 extends Thread { // Thread 상속
 class ThreadEx1_2 implements Runnable { // Runnable 인터페이스 구현
 	public void run(){
 		for(int i=0;i<5;i++){
-			// Thread.currentThread()
+			// Thread.currentThread() - 현재 실행중인 Thread를 반환한다
 			System.out.println(Thread.currentThread().getName());
 		}
 	}

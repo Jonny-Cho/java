@@ -1,0 +1,8 @@
+package ch13;
+
+public class Thread21 {
+	public static void main(String[] args) {
+		new Thread(r).start();
+		new Thread(r).start();
+	}
+}

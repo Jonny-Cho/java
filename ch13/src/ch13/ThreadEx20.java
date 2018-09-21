@@ -20,9 +20,7 @@ public class ThreadEx20 {
 			System.out.println("usedMemory:"+gc.usedMemory);
 		}
 	}
-
 }
-
 
 class ThreadEx20_1 extends Thread{
 	final static int MAX_MEMORY = 1000;
