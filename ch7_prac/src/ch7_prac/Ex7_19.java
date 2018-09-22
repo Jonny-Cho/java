@@ -26,16 +26,13 @@ class Buyer {
 		 * 1.2 가진 돈이 충분하면, 제품의 가격을 가진 돈에서 빼고 
 		 * 1.3 장바구니에 구입한 물건을 담는다.(add메서드 호출)
 		 */
-		
-		// 무슨물건인지 모른다! price는 product에만 있는데!
-		
-		if(money < p.price){
-			System.out.println("잔액이 부족합니다.");
+		if(money<p.price) {
+			System.out.println("금액이 부족합니다.");
 			return;
-		} 
-		
+		}
 		money -= p.price;
 		add(p);
+		
 	}
 
 	void add(Product p) {
@@ -67,7 +64,7 @@ class Buyer {
 		for(int i=0; i< cart.length;i++){
 			if(cart[i]==null)
 				break;
-			itemList += cart[i] + ",";
+			itemList += (i==0) ? "" + cart[i] : ", " + cart[i];
 			sum += cart[i].price;
 		}
 		/*

@@ -1,61 +1,59 @@
-package ch7;
+/*package ch7;
 
-class Product{
-	int price; // 제품 가격
-	int bonusPoint; // 제품구매시 제공하는 보너스 점수
+class Product {
+	int price;
+	int bonusPoint;
 	
 	Product(int price){
 		this.price = price;
-		bonusPoint = (int)(price/10.0); //보너스 점수는 제품가격의 10%
+		bonusPoint = (int)(price/10.0); 
 	}
-} // 제품 클래스 설정
-
-class Tv extends Product {
-	Tv() {
-		// 조상클래스의 생성자 Product(int price)를 호출한다.
-		super(100); // Tv의 가격을 100만원으로 한다.
-	}
-
-	// Object클래스의 toString()을 오버라이딩한다.
-	public String toString(){ return "Tv"; }
-	
-} // Product의 멤버를 상속받은 Tv 클래스 생성
-
-class Computer extends Product {
-	Computer() {
-		super(200); // 컴퓨터 가격 200만원
-	}
-	
-	// 오버라이딩
-	public String toString(){ return "Computer"; }
 }
 
-class Buyer { // 제품을 구매하는 사람
+class Tv extends Product{
+	Tv(){ 
+		// 조상클래스 생성자 호출
+		super(100);
+	}
+	public String toString() { return "Tv"; }
+}
+
+class Computer extends Product{
+	Computer(){
+		super(200);
+	}
+	public String toString() { return "Computer"; }
+}
+
+class Buyer { // 고객
 	int money = 1000;
 	int bonusPoint = 0;
 	
-	void buy(Product p){ //물건 구입기능 메소드. buy안에 ********* '조상'의 매개변수 사용. p는 lv
-		if(money < p.price) {
-			System.out.println("잔액이 부족하여 물건을 살 수 없습니다.");
+	void buy(Product p) { // 고객이 Tv를 사거나  Computer를 사는 메서드 구현. buy메서드 하나만 사용하기 위해서 공통 조상인 Product의 참조변수를 인스턴스로 넣는다
+		if(money<p.price) {
+			System.out.println("금액이 부족합니다.");
 			return;
 		}
-		
 		money -= p.price;
 		bonusPoint += p.bonusPoint;
-		System.out.println(p + "을/를 구입하셨습니다.");
+		System.out.println(p + "을/를 구입하셨습니다."); // toString 생략
 	}
 }
 
-public class PolyArgumentTest {
-
+class PolyArgumentTest {
 	public static void main(String[] args) {
 		Buyer b = new Buyer();
 		
 		b.buy(new Tv());
 		b.buy(new Computer());
+		b.buy(new Tv());
+		b.buy(new Computer());
+		b.buy(new Tv());
+		b.buy(new Computer());
+		b.buy(new Tv());
+		b.buy(new Computer());
 		
-		System.out.println("현재 남은 돈은 "+b.money+"만원입니다.");
-		System.out.println("현재 보너스점수는 "+b.bonusPoint+"점입니다.");
+		System.out.println("현재 남은 돈은 "+ b.money + "만원입니다.");
+		System.out.println("현재 보너스점수는 "+ b.bonusPoint + "점입니다.");
 	}
-
-}
+}*/

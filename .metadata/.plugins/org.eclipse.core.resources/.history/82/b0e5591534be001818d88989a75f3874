@@ -1,0 +1,17 @@
+package ch7;
+
+class Product {
+	int price;
+	int bonusPoint;
+	
+	Product(int price){
+		this.price = price;
+		bonusPoint = (int)(price/10.0); 
+	}
+}
+
+class PolyArgumentTest {
+	public void main(String[] args) {
+		
+	}
+}

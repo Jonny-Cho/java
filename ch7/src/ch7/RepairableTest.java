@@ -1,4 +1,4 @@
-package ch7;
+/*package ch7;
 // p.392 인터페이스의 장점 -> 새로운 공통점 만들기
 
 
@@ -91,3 +91,4 @@ class SCV extends GroundUnit implements Repairable{
 }
 
 
+*/
