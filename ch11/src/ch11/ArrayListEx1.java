@@ -12,13 +12,13 @@ public class ArrayListEx1 {
 		list1.add("444");
 		list1.add(333); //오토박싱 -> list.add(new Integer(333));
 
-		for(int i = 0; i < list1.size(); i++) {
-			System.out.println(list1.get(i));
-		}
+//		for(int i = 0; i < list1.size(); i++) {
+//			System.out.println(list1.get(i));
+//		}
 		
 		list1.add(0, "000");
 		
-		System.out.println(list1); // toString\
+		System.out.println(list1); // toString -> 편하게 출력가능
 		System.out.println("index="+list1.indexOf("333"));
 		
 		list1.remove("333"); // boolean
@@ -26,7 +26,7 @@ public class ArrayListEx1 {
 		
 		for(int i=0;i<list1.size();i++){
 			list1.set(i,  i+"");
-		}
+		} // 0~4까지 배열에 다시 집어넣음
 		
 		System.out.println(list1);
 		

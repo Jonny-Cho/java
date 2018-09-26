@@ -1,8 +1,0 @@
-import java.awt.*;
-import java.awt.event.*;
-
-public class FrameTest3 {
-	public static void main(String[] args) {
-		
-	}
-}

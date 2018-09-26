@@ -1,0 +1,52 @@
+package ch12;
+
+import java.util.ArrayList;
+
+class Nation {
+	private String name;
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
+	}
+}
+
+class City extends Nation{}
+
+public class WhildCard {
+	public static void main(String[] args) {
+		Nation nation1 = new Nation();
+		Nation nation2 = new Nation();
+		Nation nation3 = new Nation();
+		
+		nation1.setName("Korea");
+		nation1.setName("Japan");
+		nation1.setName("China");
+		
+		City city1 = new City();
+		City city2 = new City();
+		City city3 = new City();
+		
+		city1.setName("Seoul");
+		city2.setName("Tokyo");
+		city3.setName("Beijing");
+		
+		ArrayList<Nation> arrayNation = new ArrayList<Nation>();
+		arrayNation.add(nation1);
+		arrayNation.add(nation2);
+		arrayNation.add(nation3);
+		
+		ArrayList<City> arrayCity = new ArrayList<City>();
+		arrayCity.add(city1);
+		arrayCity.add(city2);
+		arrayCity.add(city3);
+		
+		for(Nation nation : arrayNation) {
+			
+		}
+		
+	}
+}

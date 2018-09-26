@@ -1,0 +1,17 @@
+package ch12;
+
+class Gen<T>{
+	private T str;
+	
+	public setGen(T str){
+		this.str = str;
+	}
+}
+
+public class GenericPrac {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

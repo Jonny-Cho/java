@@ -1,0 +1,9 @@
+package ch12;
+
+public class GenericPrac {
+
+	public static void main(String[] args) {
+		String str = "";
+	}
+
+}
