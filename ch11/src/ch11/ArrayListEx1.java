@@ -23,21 +23,24 @@ public class ArrayListEx1 {
 		
 		list1.remove("333"); // boolean
 		System.out.println(list1);
-		
+		System.out.println(list1.get(1));
+		System.out.println(list1.indexOf("222"));
 		for(int i=0;i<list1.size();i++){
 			list1.set(i,  i+"");
 		} // 0~4까지 배열에 다시 집어넣음
 		
-		System.out.println(list1);
 		
 //		for(int i=0;i<list1.size();i++){
 //			list1.remove(i);
 //		} 
 		// 결과 -> [1,3]
 		
-		for(int i=list1.size()-1;i>=0;i--){
-			list1.remove(i);
-		}
+//		for(int i=list1.size()-1;i>=0;i--){
+//			list1.remove(i);
+//		}
+		
+		list1.clear();
+		
 		// 뒤에서부터 삭제해야 함
 		System.out.println(list1);
 	}

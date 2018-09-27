@@ -1,0 +1,34 @@
+package ch11;
+
+public class MyVectorTest {
+
+	public static void main(String[] args) {
+		MyVector v = new MyVector();
+		
+//		v.add("0"); // 4. 이게 돼야 하는 함수 add 만들기
+//		v.add("1"); // 범위를 초과해도 에러가 나지 않고 자동으로 배열 크기를 늘려줘야 한다.
+//		v.add("2");
+//		v.add("3");
+//		v.add("4");
+//		v.add("5");
+//		v.add("6");
+
+		for(int i=0;i<15;i++){
+			v.add(i+"");
+		}
+		
+		for(int i=0;i<20;i++){
+			System.out.println(v.get(i));
+		}
+		
+		System.out.println(v.indexOf("5")); // "5"가 있는 위치5반환
+		
+		v.remove("1");
+		v.remove("5");
+		
+		for(int i=0;i<20;i++){
+			System.out.println(v.get(i));
+		}
+	}
+
+}

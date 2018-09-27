@@ -1,0 +1,11 @@
+package ch15;
+
+public class SerialEx1 {
+	public static void main(String[] args) {
+		try{
+			String fileName = "UserInfo.ser";
+			FileOutputStream fos = new FileOutputStream(fileName);
+			BufferedOutputStream bos = new BufferedOutputStream(fos);
+		}
+	}
+}

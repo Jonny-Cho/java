@@ -1,0 +1,17 @@
+package ch15;
+
+import java.io.IOException;
+
+public class BufferedOutputStreamEx1 {
+
+	public static void main(String[] args) {
+		try {
+			FileOutputStream fos = new FileOutputStream("123.txt");
+			
+			BufferedOutputStream bos = new BufferedOutputStream(fos, 5);
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,65 @@
+package myVectorTest;
+
+class MyVector{
+	Object[] objArr; // iv
+	int size;
+	
+	MyVector(){
+		this(16);
+	}
+	
+	MyVector(int capacity){
+		if(capacity < 0) 
+			throw new IllegalArgumentException("capacity can't be zero or nagative.");
+		objArr = new Object[capacity]; // 객체배열 초기화
+	}
+	
+	int size(){
+		return size;
+	}
+	
+	boolean isEmpty(){
+		return size==0;
+	}
+	
+	Object get(int index){
+		if(index < 0)
+			throw new IllegalArgumentException("index must not be negative.");
+		return objArr[index];
+	}
+	
+	void clear(){
+		for(int i=0;i<objArr.length;i++){
+			objArr[i] = null;
+		}
+		size = 0;
+	}
+	
+	boolean add(Object obj){
+		// 공간 부족하면
+		if(size < objArr.length){
+			// 1. 크기 2배 증가
+			Object[] newObjArr = new Object[objArr.length*2];
+			// 2. 기존 내용복사
+			System.arraycopy(objArr, 0, newObjArr, 0, size);
+			// 3. 참조변수 복사
+			objArr = newObjArr;
+		} 
+		// obj(받은 값)를 objArr에 추가
+		objArr[size++] = obj;
+		return true;
+		
+	}
+}
+
+public class MyVectorTest {
+	public static void main(String[] args) {
+		MyVector v = new MyVector(5);
+		v.add("111");
+		v.add("222");
+		v.add("333");
+		v.add("444");
+		v.add("555");
+		v.add("666");
+	}
+}

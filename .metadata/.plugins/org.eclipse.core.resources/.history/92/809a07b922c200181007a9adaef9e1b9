@@ -1,0 +1,9 @@
+package ch15;
+
+public class BufferedOutputStreamEx1 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

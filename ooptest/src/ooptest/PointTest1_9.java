@@ -1,4 +1,4 @@
-package ooptest;
+/*package ooptest;
 
 class Point3D extends Point {
 	int z;
@@ -28,7 +28,7 @@ class Point {
 	int y;
 
 	public String toString() {
-		return "Point x=" + x + ", y=" + y;
+		return "x=" + x + ", y=" + y;
 	}
 
 	Point() {
@@ -73,12 +73,11 @@ class Point {
 }
 
 public class PointTest1_9 {
-
 	public static void main(String[] args) {
 		Point p = new Point();
 //		p.x = 1;
 //		p.y = 1;
-		Point p1 = new Point(2, 2);
+		Point p1 = new Point(1, 2);
 		Point p2 = new Point(2, 2);
 		System.out.println(p.x);
 		System.out.println(p.y);
@@ -94,5 +93,5 @@ public class PointTest1_9 {
 		System.out.println(p3d);
 		System.out.println(p3d2);
 	}
-
 }
+*/

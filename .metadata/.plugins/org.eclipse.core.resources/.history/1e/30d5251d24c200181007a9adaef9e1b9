@@ -1,0 +1,9 @@
+package ch15;
+
+import java.io.*;
+
+public class DataOutputStreamEx1 {
+	public static void main(String[] args) {
+		
+	}
+}

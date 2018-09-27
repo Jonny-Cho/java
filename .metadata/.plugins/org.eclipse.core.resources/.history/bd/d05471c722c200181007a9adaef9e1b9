@@ -1,0 +1,15 @@
+package ch15;
+
+import java.io.IOException;
+
+public class BufferedOutputStreamEx1 {
+
+	public static void main(String[] args) {
+		try {
+			
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

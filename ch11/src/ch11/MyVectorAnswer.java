@@ -1,4 +1,4 @@
-/*package ch11;
+package ch11;
 
 public class MyVectorAnswer {
 	Object[] objArr; //객체배열
@@ -20,12 +20,11 @@ public class MyVectorAnswer {
 	boolean isEmpty() { return size==0; }
 	
 	void clear() {
-		for(int i=0; objArr.length; i++)
+		for(int i=0; i < objArr.length; i++)
 			objArr[i] = null;
 		// 모든 값을 null로 바꾼다
 		size = 0;
 		// size를 0으로 바꾼다
-		
 	}
 	
 	Object get(int index) {
@@ -63,8 +62,6 @@ public class MyVectorAnswer {
 		
 		if(index!=size-1)
 			System.arraycopy(objArr, index+1, objArr, index, size-1-index);
-//		objArr[size-1]=null;
-//		size--;
 		objArr[--size]=null;
 		
 		return oldObj;
@@ -86,4 +83,3 @@ public class MyVectorAnswer {
 	}
 	
 }
-*/

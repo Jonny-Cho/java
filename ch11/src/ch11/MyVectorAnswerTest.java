@@ -1,4 +1,4 @@
-/*package ch11;
+package ch11;
 
 public class MyVectorAnswerTest {
 
@@ -24,4 +24,3 @@ public class MyVectorAnswerTest {
 	}
 	
 }
-*/

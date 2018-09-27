@@ -1,0 +1,22 @@
+package ooptest;
+
+class Point3D extends Point {
+	
+}
+
+class Point {
+	int x;
+	int y;
+	Point(){
+		
+	}
+	Point(int x, int y){
+		
+	}
+}
+
+public class PointTest1_10 {
+	public static void main(String[] args){
+		Point p = new Point();
+	}
+}

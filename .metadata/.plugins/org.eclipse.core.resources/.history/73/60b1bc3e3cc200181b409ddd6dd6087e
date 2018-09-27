@@ -1,0 +1,86 @@
+package myVentorTest2;
+
+class MyVector {
+	Object[] objArr;
+	int size;
+
+	MyVector() {
+		this(16);
+	}
+
+	MyVector(int capacity) {
+		// 객체 초기화
+		objArr = new Object[capacity];
+	}
+
+	int size() {
+		return size;
+	}
+
+	int capacity() {
+		return objArr.length;
+	}
+
+	boolean isEmpty() {
+		return size == 0;
+	}
+
+	Object get(int index) {
+		return objArr[index];
+	}
+
+	void add(Object obj) {
+		if (size == objArr.length) {
+			// 1. 배열 2배
+			Object[] tmp = new Object[objArr.length * 2];
+			// 2. 복사
+			System.arraycopy(objArr, 0, tmp, 0, size);
+			// 3. 참조변수 변경
+			objArr = tmp;
+		}
+
+		objArr[size++] = obj;
+	}
+
+	int indexOf(Object obj) {
+		for (int i = 0; i < size; i++) {
+			if (obj.equals(objArr[i])) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	Object remove(Object obj) {
+		// 1. indexOf 찾기
+		// 2. 지우는 칸에 내용 덮어씌우기
+		// 3. 맨 끝에 null(맨 끝을 선택한 경우는 제외)
+		// 4. size--;
+		int idx = indexOf(obj);
+		System.arraycopy(objArr, idx+1, objArr, idx, size-idx-1);
+		objArr[size-1] = null;
+	}
+
+	public String toString() {
+		String tmp = "[";
+		for (int i = 0; i < size; i++)
+			tmp += objArr[i] + ",";
+		return tmp + "]";
+	}
+}
+
+public class MyVectorTest {
+	public static void main(String[] args) {
+		MyVector v = new MyVector(3);
+		v.add(1);
+		v.add(2);
+		v.add(3);
+		v.add(4);
+		v.add(5);
+		v.add(6);
+		v.add(7);
+		System.out.println(v);
+		System.out.println(v.size());
+		System.out.println(v.capacity());
+	}
+}
