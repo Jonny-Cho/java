@@ -1,0 +1,19 @@
+package ch16;
+
+public class NetworkEx4 {
+
+	public static void main(String[] args) {
+		Url url = null;
+		BuferedReader input = null;
+		String address = "http://www.codechobo.com/sample/hellp.html";
+		String line = "";
+		
+		try {
+			url = new URL(address);
+			input = new BufferedReader(new INputStreamReader(url.openStream()))
+		} catch(){
+			
+		}
+	}
+
+}

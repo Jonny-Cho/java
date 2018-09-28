@@ -1,0 +1,8 @@
+package ch16;
+
+public class NetworkEx1 {
+	public static void main(String[] args) {
+		InetAddress ip = null;
+		InetAddress[] ipArr = null;
+	}
+}
