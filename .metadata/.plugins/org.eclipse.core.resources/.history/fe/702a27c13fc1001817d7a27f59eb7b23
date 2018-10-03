@@ -1,7 +1,0 @@
-package ch12;
-
-public class GenericEx {
-	public static void main(String[] args) {
-		
-	}
-}
