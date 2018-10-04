@@ -1,0 +1,24 @@
+package ch12;
+
+class Box<T> {
+	T item;
+	
+	void setItem(T item){
+		this.item = item;
+	}
+	T getItem(){
+		return item;
+	}
+}
+
+public class Ex1 {
+	public static void main(String[] args) {
+		Box<String> b = new Box<String>();
+		b.setItem("123");
+		System.out.println(b.getItem());
+		
+		Box<Integer> n = new Box<Integer>();
+		n.setItem(1);
+		System.out.println(n.getItem()+1);
+	}
+}

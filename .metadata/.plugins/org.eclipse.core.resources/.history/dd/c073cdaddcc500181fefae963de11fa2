@@ -1,0 +1,9 @@
+package ch12;
+
+public class BoxEx1 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

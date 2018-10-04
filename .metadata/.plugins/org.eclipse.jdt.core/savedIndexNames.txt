@@ -4,6 +4,7 @@ INDEX VERSION 1.131+C:\Users\Jonny\java_project\java_prac\.metadata\.plugins\org
 295256051.index
 3374603405.index
 4004625332.index
+<<<<<<< Updated upstream
 2511617568.index
 3810458044.index
 1211881103.index
@@ -20,6 +21,31 @@ INDEX VERSION 1.131+C:\Users\Jonny\java_project\java_prac\.metadata\.plugins\org
 728296283.index
 1870878615.index
 1567720841.index
+=======
+3878457715.index
+1847969816.index
+1758636050.index
+486699731.index
+3995237016.index
+4073689540.index
+3374603405.index
+1904741536.index
+1211881103.index
+1004716384.index
+1511801232.index
+2312443017.index
+636315665.index
+756773126.index
+2927524569.index
+1893439535.index
+2831536327.index
+3546173663.index
+405763032.index
+3011503269.index
+3681335767.index
+1567720841.index
+4166838873.index
+>>>>>>> Stashed changes
 2291166793.index
 1988513050.index
 2773834657.index
