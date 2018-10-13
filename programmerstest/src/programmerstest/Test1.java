@@ -12,7 +12,7 @@ public class Test1 {
 //		중복제거 & 오름차순 후 arraylist2 생성
 //		arrlist1이랑 arraylist2가 같으면 true 아니면 false
 		
-		List<Integer> arrList = new ArrayList<Integer>();
+		ArrayList<Integer> arrList = new ArrayList<Integer>();
 		for(int temp : arr) {
 			arrList.add(temp);
 		}
